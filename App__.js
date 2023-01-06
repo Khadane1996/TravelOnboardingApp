@@ -10,14 +10,27 @@ import { OnBoarding } from './app/screens';
 
 const Stack = createStackNavigator();
 
-export default function App() {
+const App = () => {
   return (
+
     <NavigationContainer>
-    <Stack.Navigator>
+    <Stack.navigator>
      <Stack.Screen name="OnBoarding" component={OnBoarding} options={{ headerShown: false }} />
-    </Stack.Navigator>
+    </Stack.navigator>
     </NavigationContainer>
-  ); 
+    
+
+
+    );
 }
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
+export default App;
